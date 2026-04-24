@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Crescent Family Dental | Clinical Excellence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#e1dfdc",
+                        "on-primary-fixed": "#002117",
+                        "on-background": "#1b1c1c",
+                        "on-surface": "#1b1c1c",
+                        "tertiary-container": "#caa829",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "on-secondary-container": "#636360",
+                        "background": "#fbf9f8",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#efeded",
+                        "surface-tint": "#2b6954",
+                        "on-tertiary-container": "#4d3e00",
+                        "inverse-primary": "#95d3ba",
+                        "outline": "#707974",
+                        "tertiary-fixed": "#ffe081",
+                        "on-surface-variant": "#404944",
+                        "secondary": "#5e5e5c",
+                        "primary-fixed": "#b0f0d6",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e4e2de",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-low": "#f5f3f3",
+                        "outline-variant": "#bfc9c3",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-primary-container": "#80bea6",
+                        "primary-fixed-dim": "#95d3ba",
+                        "inverse-surface": "#303030",
+                        "inverse-on-surface": "#f2f0f0",
+                        "primary": "#003527",
+                        "secondary-fixed-dim": "#c8c6c3",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e4e2e2",
+                        "tertiary": "#725c00",
+                        "on-tertiary-fixed-variant": "#564500",
+                        "surface-dim": "#dbd9d9",
+                        "on-secondary-fixed": "#1b1c1a",
+                        "surface-variant": "#e4e2e2",
+                        "primary-container": "#064e3b",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eae8e7",
+                        "surface": "#fbf9f8",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#e8c344"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "64px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "gutter": "32px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "h3": ["Noto Serif"],
+                        "h1": ["Noto Serif"],
+                        "h2": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["36px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .organic-mask {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%);
+            border-radius: 4rem;
+        }
+
+        .alabaster-well {
+            background: #fbf9f8;
+            box-shadow: inset 0 2px 4px rgba(6, 78, 59, 0.03);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 2px rgba(6, 78, 59, 0.15);
+            color: transparent;
+        }
+
+        .text-heavy-impact {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-emerald-50/70 dark:bg-emerald-950/70 backdrop-blur-xl border-b border-emerald-900/10 dark:border-emerald-50/10 shadow-sm shadow-emerald-900/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full">
+            <img src="./dentist_logo.png" alt="Crescent Dental Logo"
+                class="h-24 md:h-28 w-auto max-w-[300px] drop-shadow-sm object-contain">
+            <nav class="hidden md:flex items-center space-x-8">
+                <a class="font-serif tracking-tight text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900/20 pb-1 transition-colors duration-300"
+                    href="#top">Home</a>
+                <a class="font-serif tracking-tight text-emerald-800/60 dark:text-emerald-200/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors duration-300"
+                    href="#about">About Us</a>
+                <a class="font-serif tracking-tight text-emerald-800/60 dark:text-emerald-200/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors duration-300"
+                    href="#services">Services</a>
+                <a class="font-serif tracking-tight text-emerald-800/60 dark:text-emerald-200/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors duration-300"
+                    href="#gallery">Gallery</a>
+                <a class="font-serif tracking-tight text-emerald-800/60 dark:text-emerald-200/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors duration-300"
+                    href="#contact">Contact Us</a>
+            </nav>
+            <a href="#booking"
+                class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-serif text-sm tracking-wide active:scale-95 transition-transform hover:bg-primary transition-colors inline-block cursor-pointer">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+    <main class="pt-24 overflow-x-hidden" id="top">
+        <!-- Hero Section -->
+        <section class="px-margin mb-xl">
+            <div class="relative w-full h-[819px] organic-mask overflow-hidden shadow-xl">
+                <img class="absolute inset-0 w-full h-full object-cover"
+                    data-alt="Cinematic wide shot of a luxury dental clinic with soft emerald accents, marble floors, and warm sunlight streaming through large windows."
+                    src="./ozkan-guner-AWqHc49SU-c-unsplash.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent flex items-center px-lg">
+                    <div class="max-w-2xl text-white">
+                        <h1 class="font-h1 text-[4rem] leading-[1.1] mb-md font-bold text-shadow">Get
+                            Personalized<br /><span class="font-light italic">Gentle Dental Care</span></h1>
+                        <p class="font-body-lg text-xl mb-lg opacity-90 tracking-wide">Relieve Pain, Ease the Fear, and
+                            Restore Your Smile.</p>
+                        <div class="flex gap-md">
+                            <a href="#contact"
+                                class="bg-tertiary-container text-on-tertiary-container px-xl py-md rounded-full font-label-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-lg inline-block cursor-pointer">Reserve
+                                Visit</a>
+                            <button
+                                class="border border-white/40 text-white px-xl py-md rounded-full font-label-sm uppercase tracking-widest backdrop-blur-md hover:bg-white/10 transition-all">Explore
+                                Services</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Workspace Collage -->
+        <section class="bg-[#fbf9f8] py-xl" id="about">
+            <div class="px-margin max-w-7xl mx-auto">
+                <div class="grid grid-cols-12 gap-gutter items-center">
+                    <div class="col-span-12 md:col-span-5">
+                        <h2 class="font-h2 text-3xl font-bold text-primary mb-md">Crescent Family Dental: Your Smile,
+                            Our Care in Wheeling, IL</h2>
+                        <p class="font-body-md text-body-md text-secondary mb-lg">Crescent Family Dental is one of the
+                            most reputable dental offices in Wheeling, IL, providing top-quality care and pristine
+                            services. Patients love our gentle approach and individualized dental care, designed to give
+                            you the most beautiful and healthy smile possible.</p>
+                        <p class="font-body-md text-body-md text-secondary mb-lg">With our highly experienced dentists
+                            and state-of-the-art technology, your dental journey is certain to be pleasurable and
+                            stress-free. If you're looking for an ultimate dental experience, look no further.</p>
+                        <div class="flex items-center gap-sm text-primary font-label-sm tracking-widest uppercase">
+                            <span>About Us</span>
+                            <div class="h-[1px] w-12 bg-tertiary-container"></div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-7 grid grid-cols-2 gap-md">
+                        <div class="space-y-md">
+                            <img class="w-full h-64 object-cover rounded-xl shadow-md"
+                                data-alt="Close-up of a modern, minimalist dental chair with plush light gray upholstery in a bright room with green plants."
+                                src="./enis-yavuz-VC5lS43bwJo-unsplash.jpg" />
+                            <img class="w-full h-80 object-cover rounded-lg shadow-md"
+                                data-alt="Macro detail of a polished brass dental instrument tray reflecting soft clinical lighting."
+                                src="./filip-rankovic-grobgaard-joILn6p_oeM-unsplash.jpg" />
+                        </div>
+                        <div class="pt-xl">
+                            <img class="w-full h-[400px] object-cover rounded-xl shadow-lg border border-primary/10"
+                                data-alt="Wide-angle view of a serene dental reception area with emerald marble textures and soft ambient lighting."
+                                src="./atikah-akhtar-XJptUS8nbhs-unsplash.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Anchor Section -->
+        <section class="relative bg-white py-16 overflow-hidden border-y border-emerald-900/5">
+            <div class="flex items-center justify-around whitespace-nowrap animate-infinite-scroll">
+                <div class="flex gap-12 items-center text-primary font-h3 text-2xl px-4">
+                    <span>Braces</span> <span class="text-tertiary-container">+</span>
+                    <span>Crescent Family Dental</span> <span class="text-tertiary-container">+</span>
+                    <span>Oral Surgery</span> <span class="text-tertiary-container">+</span>
+                    <span>Dentures</span> <span class="text-tertiary-container">+</span>
+                    <span>Whitening</span> <span class="text-tertiary-container">+</span>
+                </div>
+                <div class="flex gap-12 items-center text-primary font-h3 text-2xl px-4">
+                    <span>Braces</span> <span class="text-tertiary-container">+</span>
+                    <span>Crescent Family Dental</span> <span class="text-tertiary-container">+</span>
+                    <span>Oral Surgery</span> <span class="text-tertiary-container">+</span>
+                    <span>Dentures</span> <span class="text-tertiary-container">+</span>
+                    <span>Whitening</span> <span class="text-tertiary-container">+</span>
+                </div>
+            </div>
+        </section>
+        <style>
+            @keyframes scroll {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-infinite-scroll {
+                animation: scroll 30s linear infinite;
+                display: flex;
+                width: max-content;
+            }
+        </style>
+        <!-- Visual Anchor Section (Modified/Merged into above) -->
+        <section class="relative bg-emerald-50/10 py-24 overflow-hidden hidden">
+            <!-- Original anchor section content preserved in structure but replaced by high-fidelity recreation above -->
+        </section>
+        <!-- Limited Invitations (Promotional Zone) -->
+        <section class="bg-emerald-50/30 py-xl">
+            <div class="px-margin max-w-7xl mx-auto">
+                <div class="bg-primary text-white rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                    <div class="p-lg lg:p-xl flex-1 border-b lg:border-b-0 lg:border-r border-white/10">
+                        <span class="font-label-sm tracking-[0.2em] uppercase text-tertiary-fixed mb-md block">Grand
+                            Opening Specials</span>
+                        <h2 class="font-h1 text-h2 mb-md"><span
+                                class="line-through opacity-60 text-3xl mr-2">$280</span> $99 <br>Full Exam, X-Ray, and
+                            Basic Cleaning*</h2>
+                        <ul class="space-y-sm mb-lg opacity-80">
+                            <li class="flex items-center gap-base"><span
+                                    class="material-symbols-outlined text-sm">check_circle</span> Comprehensive Checkup
+                            </li>
+                            <li class="flex items-center gap-base"><span
+                                    class="material-symbols-outlined text-sm">check_circle</span> Digital X-Rays
+                                included</li>
+                            <li class="flex items-center gap-base"><span
+                                    class="material-symbols-outlined text-sm">check_circle</span> Essential Care Plan
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="bg-tertiary-container text-on-tertiary-container px-lg py-sm rounded-full font-label-sm inline-block cursor-pointer">BOOK
+                            NOW</a>
+                    </div>
+                    <div class="p-lg lg:p-xl flex-1 bg-primary-container/50">
+                        <h3 class="font-h3 text-h3 mb-lg text-tertiary-fixed">Special Offers</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                            <div
+                                class="p-md bg-white/5 rounded-lg border border-white/10 flex flex-col justify-center text-center py-xl">
+                                <p class="text-xs font-bold tracking-widest uppercase mb-sm">Braces for kids</p>
+                                <p class="text-[2rem] font-serif">$3000*</p>
+                            </div>
+                            <div
+                                class="p-md bg-white/5 rounded-lg border border-white/10 flex flex-col justify-center text-center py-xl">
+                                <p class="text-xs font-bold tracking-widest uppercase mb-sm">Implants</p>
+                                <p class="text-[2rem] font-serif">$2000*</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- World-Class Services -> Moved above Gallery -->
+        <section class="bg-white py-xl" id="services">
+            <div class="px-margin max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+                    <div class="max-w-lg">
+                        <h2 class="font-h2 text-h2 text-primary mb-sm">Our Services</h2>
+                        <p class="font-body-md text-body-md text-secondary">A curated suite of clinical services
+                            designed to harmonize health and aesthetics.</p>
+                    </div>
+                    <button
+                        class="font-label-sm text-primary border-b border-primary/20 pb-1 hover:border-primary transition-all">VIEW
+                        ALL SERVICES</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                    <!-- Service Card -->
+                    <div
+                        class="group p-lg bg-slate-50 border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">dentistry</span>
+                        <h4 class="font-h3 text-h3 text-primary mb-sm">Dental Implants</h4>
+                        <p class="font-body-md text-secondary text-sm mb-md opacity-80">Doctor-recommended medical-grade
+                            titanium choices for permanently replacing lost teeth.</p>
+                        <div class="h-1 w-0 bg-tertiary group-hover:w-full transition-all duration-500"></div>
+                    </div>
+                    <div
+                        class="group p-lg bg-slate-50 border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">flare</span>
+                        <h4 class="font-h3 text-h3 text-primary mb-sm">Teeth Whitening</h4>
+                        <p class="font-body-md text-secondary text-sm mb-md opacity-80">Enlighten your smile with our
+                            professional boutique whitening systems for lasting brilliance.</p>
+                        <div class="h-1 w-0 bg-tertiary group-hover:w-full transition-all duration-500"></div>
+                    </div>
+                    <div
+                        class="group p-lg bg-slate-50 border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">auto_awesome</span>
+                        <h4 class="font-h3 text-h3 text-primary mb-sm">Dental Veneers</h4>
+                        <p class="font-body-md text-secondary text-sm mb-md opacity-80">Artistically crafted shells that
+                            completely transform the shape, color, and alignment of your perfect smile.</p>
+                        <div class="h-1 w-0 bg-tertiary group-hover:w-full transition-all duration-500"></div>
+                    </div>
+                    <div
+                        class="group p-lg bg-slate-50 border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">shield</span>
+                        <h4 class="font-h3 text-h3 text-primary mb-sm">Dental Crowns</h4>
+                        <p class="font-body-md text-secondary text-sm mb-md opacity-80">Durable, metal-free restoration
+                            options that seamlessly preserve your natural tooth structure.</p>
+                        <div class="h-1 w-0 bg-tertiary group-hover:w-full transition-all duration-500"></div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div
+                        class="group p-lg bg-slate-50 border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">psychology</span>
+                        <h4 class="font-h3 text-h3 text-primary mb-sm">Root Canal</h4>
+                        <p class="font-body-md text-secondary text-sm mb-md opacity-80">When a tooth becomes decayed,
+                            pain-free root canal therapy using microscopic precision saves it.</p>
+                        <div class="h-1 w-0 bg-tertiary group-hover:w-full transition-all duration-500"></div>
+                    </div>
+                    <div
+                        class="group p-lg bg-slate-50 border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">straighten</span>
+                        <h4 class="font-h3 text-h3 text-primary mb-sm">Braces</h4>
+                        <p class="font-body-md text-secondary text-sm mb-md opacity-80">Traditional and ceramic
+                            orthodontic solutions tailored for growing children and adults of all ages.</p>
+                        <div class="h-1 w-0 bg-tertiary group-hover:w-full transition-all duration-500"></div>
+                    </div>
+                    <div
+                        class="group p-lg bg-primary-container text-white border border-emerald-900/5 rounded-lg hover:shadow-lg transition-all duration-500 lg:col-span-2">
+                        <div class="flex items-center h-full gap-lg">
+                            <span class="material-symbols-outlined text-6xl opacity-30">visibility</span>
+                            <div>
+                                <h4 class="font-h3 text-h3 mb-xs text-tertiary-fixed">Invisalign</h4>
+                                <p class="font-body-md opacity-80">A virtually invisible alternative to traditional
+                                    braces for both adults and teens.</p>
+                                <button
+                                    class="mt-md text-xs font-bold tracking-widest underline underline-offset-4">SCHEDULE
+                                    SCAN</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smile Makeovers (Before & After) -> Moved here below Services -->
+        <section class="bg-primary py-xl" id="gallery">
+            <div class="px-margin">
+                <div class="max-w-5xl mx-auto text-center mb-lg">
+                    <h2 class="font-h2 text-h2 text-white mb-sm">Transform your smile with confidence!</h2>
+                    <p class="font-body-md text-body-md text-emerald-50/90">We create bright, natural-looking smiles
+                        using advanced cosmetic dentistry. From veneers and crowns to whitening and aligners, our
+                        skilled dentists perfect your smile, whether your teeth are discolored, chipped, gapped, or
+                        uneven.</p>
+                </div>
+                <div class="max-w-4xl mx-auto relative group">
+                    <div
+                        class="relative w-full max-w-4xl h-[400px] md:h-[500px] overflow-hidden rounded-xl border-4 border-white shadow-xl group">
+                        <!-- Before Image (Base) -->
+                        <img class="absolute inset-0 w-full h-full object-cover grayscale" src="./before.jpg"
+                            alt="Before">
+                        <div
+                            class="absolute top-4 left-4 bg-white/80 backdrop-blur px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest z-10 shadow">
+                            Before</div>
+                        <!-- After Image (Clipped) -->
+                        <img id="after-image" class="absolute inset-0 w-full h-full object-cover relative z-0"
+                            src="./after.jpg" alt="After"
+                            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);">
+                        <div id="after-label"
+                            class="absolute top-4 right-4 bg-primary-container text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest z-10 shadow">
+                            After</div>
+
+                        <!-- Slider Input -->
+                        <input type="range"
+                            class="appearance-none absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20"
+                            id="smile-slider" min="0" max="100" value="50"
+                            oninput="document.getElementById('after-image').style.clipPath = `polygon(${this.value}% 0, 100% 0, 100% 100%, ${this.value}% 100%)`; document.getElementById('slider-handle').style.left = `${this.value}%`;">
+
+                        <!-- Slider Handle Visual -->
+                        <div id="slider-handle"
+                            class="absolute top-0 bottom-0 w-1 bg-white flex items-center justify-center transform -translate-x-1/2 pointer-events-none z-10 shadow-lg"
+                            style="left: 50%;">
+                            <div
+                                class="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary border border-emerald-100">
+                                <span class="material-symbols-outlined text-lg">swap_horiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-lg text-center">
+                        <p class="italic text-emerald-100 opacity-90 font-medium">"Confidence restored through porcelain
+                            artistry."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Expertise You Trust (Doctors) -->
+        <section class="bg-emerald-50/30 py-xl">
+            <div class="px-margin max-w-7xl mx-auto">
+                <div class="text-center mb-xl">
+                    <h2 class="font-h2 text-h2 text-primary mb-sm">Meet the dentist</h2>
+                    <p class="font-body-md text-body-md text-secondary">Expertise grounded in global education and local
+                        compassion.</p>
+                </div>
+                <div class="space-y-24 max-w-5xl mx-auto items-center">
+                    <!-- Dr. Nidhi Handa -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+                        <div
+                            class="relative overflow-hidden rounded-[2rem] aspect-square max-w-[400px] w-full mx-auto border-8 border-white shadow-xl">
+                            <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                                data-alt="Portrait of Dr. Nidhi Handa" src="./nidhi.png" />
+                        </div>
+                        <div>
+                            <h3 class="font-h3 text-h3 text-primary mb-4 text-center md:text-left">Dr. Nidhi Handa</h3>
+                            <p class="font-body-md text-secondary opacity-90 text-left mb-md">
+                                Dr. Nidhi Handa received her Doctor of Dental Medicine (DMD) from Boston University
+                                Dental School in 2011. Since then, she has established herself among the top dentists in
+                                Wheeling, IL, with patients traveling far to seek her expertise in preventive,
+                                restorative, and cosmetic dentistry.
+                            </p>
+                            <p class="font-body-md text-secondary opacity-90 text-left mb-md">
+                                She loves caring for patients of all ages, heavily emphasizing patient education to
+                                maintain comprehensive dental health. Dr. Handa stays at the forefront of the latest
+                                clinical advancements through rigorous continuing education. Outside the clinic, she
+                                enjoys spending time with her family and friends.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Dr. Hidayathulla Khan -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+                        <div class="order-2 md:order-1">
+                            <h3 class="font-h3 text-h3 text-primary mb-4 text-center md:text-left">Dr. Hidayathulla Khan
+                            </h3>
+                            <p class="font-body-md text-secondary opacity-90 text-left mb-md">
+                                Dr. Hidayathulla Khan received his Doctor of Dental Medicine from the University of
+                                Illinois and holds a Master's degree in Dental Surgery from Rajiv Gandhi University. He
+                                is recognized as a premier provider in Wheeling, IL for his expert management of
+                                preventative, restorative, and complex cosmetic dentistry.
+                            </p>
+                            <p class="font-body-md text-secondary opacity-90 text-left mb-md">
+                                Dedicated to providing exceptional care for all ages, Dr. Khan strongly believes in
+                                empowering his patients through education. He frequently attends advanced continuing
+                                education programs to master the latest dental technologies and treatments. Outside of
+                                practice, he enjoys spending quality time with friends and family.
+                            </p>
+                        </div>
+                        <div
+                            class="relative overflow-hidden rounded-[2rem] aspect-square max-w-[400px] w-full mx-auto border-8 border-white shadow-xl order-1 md:order-2">
+                            <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                                data-alt="Portrait of Dr. Hidayathulla Khan" src="./khan.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Financing -->
+        <section class="bg-surface-container-low py-xl">
+            <div class="px-margin max-w-7xl mx-auto">
+                <div
+                    class="px-xl py-12 md:py-24 bg-primary text-white rounded-3xl border border-emerald-900/10 shadow-2xl relative overflow-hidden">
+                    <!-- Dynamic Background Element -->
+                    <div
+                        class="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-400/20 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4 pointer-events-none">
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-xl relative z-10">
+                        <div class="flex-1 text-center md:text-left">
+                            <h2 class="font-h2 text-h2 text-white mb-sm">Financing Available</h2>
+                            <p class="font-body-md text-white/90 mb-lg">We Accept Most Major Credit Cards!</p>
+                            <img src="./logos.png" alt="Visa, Mastercard, Amex, Discover"
+                                class="max-h-20 object-contain bg-white px-4 py-2 rounded-xl border border-white/20 inline-block md:block" />
+                        </div>
+                        <div class="flex-1 bg-white/10 backdrop-blur-md p-xl rounded-2xl border border-white/20">
+                            <h4 class="font-label-sm tracking-widest text-emerald-100 mb-md uppercase">Financing
+                                Partners</h4>
+                            <div class="flex flex-wrap gap-sm">
+                                <span
+                                    class="font-body-md font-medium px-4 py-2 border border-white/10 rounded-full bg-white/10 text-white backdrop-blur-sm text-sm hover:bg-white/20 transition-colors">Carecredit</span>
+                                <span
+                                    class="font-body-md font-medium px-4 py-2 border border-white/10 rounded-full bg-white/10 text-white backdrop-blur-sm text-sm hover:bg-white/20 transition-colors">Lending
+                                    Club</span>
+                                <span
+                                    class="font-body-md font-medium px-4 py-2 border border-white/10 rounded-full bg-white/10 text-white backdrop-blur-sm text-sm hover:bg-white/20 transition-colors">Interest-Free
+                                    Options</span>
+                                <span
+                                    class="font-body-md font-medium px-4 py-2 border border-white/10 rounded-full bg-white/10 text-white backdrop-blur-sm text-sm hover:bg-white/20 transition-colors">All
+                                    PPO insurance</span>
+                                <span
+                                    class="font-body-md font-bold px-4 py-2 border border-emerald-400/50 rounded-full bg-emerald-500/30 text-white backdrop-blur-sm text-sm flex items-center gap-2"><span
+                                        class="relative flex h-2 w-2"><span
+                                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span
+                                            class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span>
+                                    Medicaid in process</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Patient Voices -->
+        <section class="bg-[#fbf9f8] py-xl">
+            <div class="px-margin">
+                <div class="text-center mb-xl">
+                    <h2 class="font-h2 text-h2 text-primary">What are Patients Saying?</h2>
+                </div>
+                <div class="relative overflow-hidden w-full pb-lg group">
+                    <div class="flex gap-gutter animate-infinite-scroll w-max">
+                        <!-- Testimonial Card 1 -->
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"Love my dentist! was very
+                                satisfied with Dr. Dentist (I don't know his name.) He gave me very good advice. He was
+                                very nice, I will go back to have him take care of me. Thank you so much.! The staff is
+                                amazing and friendly. Always comfortable when I walk in or get any procedures done. Love
+                                this place, highly recommend"</p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    ML</div>
+                                <div>
+                                    <p class="font-bold text-primary">Mary Lancaster</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 2 -->
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"I had a regular dental clean and
+                                checkup. All the staff were quick and friendly. Doctor was knowledgeable. The only
+                                reason I couldn't rate 5 is because the clinic was not using any disposable paper sheets
+                                or linen on the patients recliner chairs . The space was small but yet they had a small
+                                play area for toddlers which was really thoughtful."</p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    PM</div>
+                                <div>
+                                    <p class="font-bold text-primary">Prathibha Meka</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 3 -->
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"I love Crescent Dental. Everyone
+                                is so cordial and pleasant. One thing I love is they don't try and upsell you. 5*****"
+                            </p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    ms</div>
+                                <div>
+                                    <p class="font-bold text-primary">mark s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 4 -->
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"I have had exceptional service
+                                here! I had an implant and it was a breeze and went perfectly! I also have had cosmetic
+                                work performed as well as fillings. Dr. Kahn does amazing work, and the staff is super
+                                friendly! I highly recommend giving them a try and have referred friends and family to
+                                them as well."</p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    BY</div>
+                                <div>
+                                    <p class="font-bold text-primary">Bob Yoest</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeated Cards for Seamless Scroll -->
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"Love my dentist! was very
+                                satisfied with Dr. Dentist (I don't know his name.) He gave me very good advice. He was
+                                very nice, I will go back to have him take care of me. Thank you so much.! The staff is
+                                amazing and friendly. Always comfortable when I walk in or get any procedures done. Love
+                                this place, highly recommend"</p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    ML</div>
+                                <div>
+                                    <p class="font-bold text-primary">Mary Lancaster</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"I had a regular dental clean and
+                                checkup. All the staff were quick and friendly. Doctor was knowledgeable. The only
+                                reason I couldn't rate 5 is because the clinic was not using any disposable paper sheets
+                                or linen on the patients recliner chairs . The space was small but yet they had a small
+                                play area for toddlers which was really thoughtful."</p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    PM</div>
+                                <div>
+                                    <p class="font-bold text-primary">Prathibha Meka</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"I love Crescent Dental. Everyone
+                                is so cordial and pleasant. One thing I love is they don't try and upsell you. 5*****"
+                            </p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    ms</div>
+                                <div>
+                                    <p class="font-bold text-primary">mark s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[300px] md:w-[450px] p-xl bg-white rounded-lg shadow-sm border border-emerald-900/5 italic flex-shrink-0">
+                            <p class="font-body-lg text-body-md text-secondary mb-lg">"I have had exceptional service
+                                here! I had an implant and it was a breeze and went perfectly! I also have had cosmetic
+                                work performed as well as fillings. Dr. Kahn does amazing work, and the staff is super
+                                friendly! I highly recommend giving them a try and have referred friends and family to
+                                them as well."</p>
+                            <div class="flex items-center gap-sm non-italic">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-primary font-bold">
+                                    BY</div>
+                                <div>
+                                    <p class="font-bold text-primary">Bob Yoest</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Office Info & Map -->
+        <section id="contact" class="px-margin mb-xl py-xl scroll-mt-40">
+            <div
+                class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center bg-primary rounded-xl overflow-hidden shadow-2xl border-none">
+                <div class="p-xl relative overflow-hidden">
+                    <!-- Subtle decorative element -->
+                    <div
+                        class="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-400/10 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none">
+                    </div>
+
+                    <h2 class="font-h2 text-h2 text-white mb-lg relative z-10">Office Location</h2>
+                    <p class="font-body-md text-emerald-50/90 mb-lg relative z-10">Crescent Family Dental is a
+                        family-run private dental practice serving the surrounding communities since 2021.</p>
+                    <div class="space-y-lg relative z-10 pt-4">
+                        <div>
+                            <p class="font-label-sm uppercase tracking-[0.2em] text-emerald-300 mb-sm text-sm">Address
+                            </p>
+                            <p class="font-body-lg text-white font-medium text-lg leading-relaxed">307 S Milwaukee Ave
+                                Ste 101,<br />Wheeling, IL 60090</p>
+                        </div>
+                        <div>
+                            <p class="font-label-sm uppercase tracking-[0.2em] text-emerald-300 mb-sm text-sm">Inquiries
+                            </p>
+                            <p class="font-body-md text-white font-medium text-lg">+1 847 999 0010 &nbsp;•&nbsp;
+                                hello@crescentdental.com</p>
+                        </div>
+                        <div>
+                            <p
+                                class="font-label-sm uppercase tracking-[0.2em] text-emerald-300 mb-sm text-sm text-left">
+                                Hours Open</p>
+                            <table class="text-white text-sm font-medium border-collapse w-full max-w-sm">
+                                <tbody>
+                                    <tr>
+                                        <td class="py-1.5 opacity-90 w-[45%]">Tuesday</td>
+                                        <td class="py-1.5">9:00 AM — 7:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1.5 opacity-90">Thursday - Friday</td>
+                                        <td class="py-1.5">10:00 AM — 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1.5 opacity-90">Saturday</td>
+                                        <td class="py-1.5">9:00 AM — 2:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1.5 text-emerald-300/80">Mon, Wed, Sun</td>
+                                        <td class="py-1.5 text-emerald-300/80">Closed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pt-2">
+                            <button
+                                class="px-8 py-4 bg-white text-primary font-bold rounded-full font-label-sm tracking-widest hover:bg-emerald-50 transition-colors shadow-xl border-none text-[13px]">GET
+                                DIRECTIONS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full p-4 pb-8 md:py-12 md:pr-12 md:pl-0">
+                    <div
+                        class="w-full h-full min-h-[400px] md:min-h-[450px] relative rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-white/10 group">
+                        <!-- Live Google Maps Embed -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.1287957657963!2d-87.91574632360218!3d42.19014167120612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb05342a3a5f9%3A0xe549b6b801458d57!2s307%20S%20Milwaukee%20Ave%20%23101%2C%20Wheeling%2C%20IL%2060090!5e0!3m2!1sen!2sus!4v1703276587440!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute inset-0 grayscale contrast-125 opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bg-emerald-950"></iframe>
+                        <!-- Optional hover hint -->
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest z-10 shadow-lg text-primary flex items-center gap-2 pointer-events-none opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                            <span class="material-symbols-outlined text-sm">touch_app</span> Interactive Map
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="booking" class="bg-primary text-white py-16 scroll-mt-24">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+            <!-- Top Row -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8 border-b border-emerald-900/40 pb-16">
+                <h2 class="text-3xl md:text-4xl font-bold max-w-2xl leading-tight">Thousands of happy and healthy smiles
+                    in the heart of Wheeling, IL.</h2>
+                <a href="#contact"
+                    class="whitespace-nowrap px-8 py-4 bg-white hover:bg-emerald-50 text-primary font-bold text-lg rounded shadow-lg transition-colors inline-block cursor-pointer">Book
+                    an Appointment</a>
+            </div>
+
+            <!-- Middle Row -->
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 border-b border-emerald-900/40 pb-12 mb-8">
+                <!-- Col 1 -->
+                <div>
+                    <h4 class="font-bold text-white mb-6 text-lg tracking-wide">Our Services</h4>
+                    <ul class="space-y-4 text-emerald-50/80 font-medium text-[15px]">
+                        <li><a href="#" class="hover:text-white transition-colors">Dental Implants</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Teeth Whitening</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Dental Veneers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Dental Crowns</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Root Canal</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Braces</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Invisalign</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-bold text-white mb-6 text-lg tracking-wide">More</h4>
+                    <ul class="space-y-4 text-emerald-50/80 font-medium text-[15px]">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-bold text-white mb-6 text-lg tracking-wide">Contact</h4>
+                    <div class="space-y-6 text-emerald-50/80 text-[15px] font-medium">
+                        <div>
+                            <p class="font-bold text-white text-base mb-1">+1 847 999 0010</p>
+                            <p>307 S Milwaukee Ave Ste 101, Wheeling, IL 60090</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-white text-base mb-2">Hours Open</p>
+                            <table class="w-full text-emerald-50/80">
+                                <tbody>
+                                    <tr>
+                                        <td class="pb-1 w-1/2">Tuesday:</td>
+                                        <td class="pb-1">9:00 AM — 7:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-1">Thurs - Fri:</td>
+                                        <td class="pb-1">10:00 AM — 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-1">Saturday:</td>
+                                        <td class="pb-1">9:00 AM — 2:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-1">Mon, Wed, Sun:</td>
+                                        <td class="pb-1">Closed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex gap-4 pt-2">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-emerald-50/30 flex items-center justify-center hover:bg-white/10 hover:text-white transition-colors tracking-widest text-xs font-bold">f</a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-emerald-50/30 flex items-center justify-center hover:bg-white/10 hover:text-white transition-colors tracking-widest text-xs font-bold">IG</a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-emerald-50/30 flex items-center justify-center hover:bg-white/10 hover:text-white transition-colors tracking-widest text-xs font-bold font-serif">X</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 4 (Map) -->
+                <div class="w-full h-56 rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-white/5">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.1287957657963!2d-87.91574632360218!3d42.19014167120612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb05342a3a5f9%3A0xe549b6b801458d57!2s307%20S%20Milwaukee%20Ave%20%23101%2C%20Wheeling%2C%20IL%2060090!5e0!3m2!1sen!2sus!4v1703276587440!5m2!1sen!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="flex justify-center text-center mt-6">
+                <p class="text-[15px] font-bold text-white tracking-wide">© 2026 Crescent Family Dental Dentistry. All
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Automatically add reveal class to section content wrappers
+            const sectionWrappers = document.querySelectorAll('main > section:not(:first-child) > div:first-child');
+            sectionWrappers.forEach(el => el.classList.add('reveal'));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Stop watching once revealed
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
