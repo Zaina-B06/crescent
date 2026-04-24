@@ -154,11 +154,11 @@
 
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- TopAppBar -->
-    <header
-        class="fixed top-0 w-full z-50 bg-emerald-50/70 dark:bg-emerald-950/70 backdrop-blur-xl border-b border-emerald-900/10 dark:border-emerald-50/10 shadow-sm shadow-emerald-900/5">
+    <header id="main-nav"
+        class="fixed top-0 w-full z-50 bg-emerald-50/70 dark:bg-emerald-950/70 backdrop-blur-xl border-b border-emerald-900/10 dark:border-emerald-50/10 shadow-sm shadow-emerald-900/5 transition-transform duration-300">
         <div class="flex justify-between items-center px-8 py-4 max-w-full">
-            <img src="./dentist_logo.png" alt="Crescent Dental Logo"
-                class="h-24 md:h-28 w-auto max-w-[300px] drop-shadow-sm object-contain">
+            <img src="dentist_logo (2).png" alt="Crescent Dental Logo"
+                class="h-16 md:h-20 w-auto max-w-[250px] drop-shadow-sm object-contain">
             <nav class="hidden md:flex items-center space-x-8">
                 <a class="font-serif tracking-tight text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900/20 pb-1 transition-colors duration-300"
                     href="#top">Home</a>
@@ -892,6 +892,22 @@
             }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+
+        // Navbar scroll hide/show logic
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('main-nav');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Downscroll and passed hero a bit - hide
+                navbar.classList.add('-translate-y-full');
+            } else {
+                // Upscroll - show
+                navbar.classList.remove('-translate-y-full');
+            }
+            lastScrollTop = scrollTop;
         });
     </script>
 </body>
